@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body onload="init()">
+    <nav class="navbar">
+        <div class="container">
+                <div class="navbar-wrap">
+                    <ul class="navbar-menu">
+                        <li><a href="index.html">Рандомайзер</a></li>
+                        <li><a href="game.html">Игра</a></li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+    <div class="timer">
+        <script type="text/javascript">
+            function init()
+            {
+                sec = 0;
+                setInterval(tick, 1000);
+            }
+            
+            function tick()
+            {
+                sec++;
+                document.getElementById("timer").
+                    childNodes[0].nodeValue = sec;
+            }
+        </script>
+        <div id="timer">0</div>
+    </div>
+
+    <div class="game">
+        <div id="dino"></div>
+        <div id="cactus"></div>
+    </div>
+    <div class="secret">
+        <li><a href="https://youtu.be/RKjgIfZC6wQ?si=4n3Cpue87Z5x8Q4c">секрет</a></li>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
